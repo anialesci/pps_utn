@@ -1,6 +1,5 @@
 const { functionMysql } = require("../utils/mysql");
-
-exports.list = async (req, res) => {
+exports.list = async function list(req, res) {
   
   try {
     const conn = await functionMysql();
@@ -18,4 +17,5 @@ exports.list = async (req, res) => {
   } catch (error) {
     console.log("error es, ", error);
   }
-};
+}
+
